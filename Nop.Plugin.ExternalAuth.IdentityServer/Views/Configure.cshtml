@@ -1,0 +1,119 @@
+﻿@model Nop.Plugin.ExternalAuth.IdentityServer.Models.ConfigurationModel
+@{
+    Layout = "_ConfigurePlugin";
+}
+@inject Nop.Core.IWebHelper webHelper
+
+<form asp-controller="IdentityServerAuthentication" asp-action="Configure" method="post">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                @T("Plugins.ExternalAuth.IdentityServer.Instructions")
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ClientId" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ClientId" />
+                        <span asp-validation-for="ClientId"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ClientSecret" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ClientSecret" />
+                        <span asp-validation-for="ClientSecret"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="Authority" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="Authority" />
+                        <span asp-validation-for="Authority"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="RequireHttpsMetadata" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="RequireHttpsMetadata" />
+                        <span asp-validation-for="RequireHttpsMetadata"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ResponseType" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ResponseType" />
+                        <span asp-validation-for="ResponseType"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="SaveTokens" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="SaveTokens" />
+                        <span asp-validation-for="SaveTokens"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="Scopes" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="Scopes" />
+                        <span asp-validation-for="Scopes"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="NameClaimType" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="NameClaimType" />
+                        <span asp-validation-for="NameClaimType"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="RoleClaimType" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="RoleClaimType" />
+                        <span asp-validation-for="RoleClaimType"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="Audience" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="Audience" />
+                        <span asp-validation-for="Audience"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ClaimsIssuer" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ClaimsIssuer" />
+                        <span asp-validation-for="ClaimsIssuer"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3">
+                        <input type="submit" name="save" class="btn bg-primary" value="@T("Admin.Common.Save")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</form>

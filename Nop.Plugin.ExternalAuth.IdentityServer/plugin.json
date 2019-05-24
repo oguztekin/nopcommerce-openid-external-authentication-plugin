@@ -1,0 +1,11 @@
+{
+  "Group": "ExternalAuth methods",
+  "FriendlyName": "IdentityServer authentication",
+  "SystemName": "ExternalAuth.IdentityServer",
+  "Version": "1.0.0",
+  "SupportedVersions": [ "4.20" ],
+  "Author": "Oðuz Tekin",
+  "DisplayOrder": 5,
+  "FileName": "Nop.Plugin.ExternalAuth.IdentityServer.dll",
+  "Description": "This plugin enables IdentityServer authentication (login using IdentityServer account)"
+}

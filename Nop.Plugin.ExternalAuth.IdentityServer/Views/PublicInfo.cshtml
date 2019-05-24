@@ -1,0 +1,8 @@
+﻿@{
+    Layout = "";
+}
+<div class="identity-server-login-block">
+    <div class="buttons">
+        <a asp-controller="IdentityServerAuthentication" asp-action="Login" asp-route-returnurl="@Context.Request.Query["ReturnUrl"]" class="btn">IdentityServer</a>
+    </div>
+</div>
